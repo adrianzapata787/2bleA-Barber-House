@@ -149,3 +149,12 @@ footer {
         margin: 25px auto 0;
     }
 }
+.instagram {
+    background: #ffffff;
+    color: #000000;
+    margin-top: 5px;
+}
+
+.instagram:hover {
+    opacity: 0.85;
+}
