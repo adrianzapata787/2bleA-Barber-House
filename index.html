@@ -303,7 +303,7 @@ function compartirPagina() {
     }
 }
             </script>
-    <section class="seccion" id="panelAdmin">
+    <section class="seccion" id="panelAdmin" style="display: none;">
 
     <div class="contenedor">
 
@@ -325,6 +325,25 @@ function compartirPagina() {
 
     </section>
     <script>
+        function abrirAdmin() {
+
+    const clave = prompt("Ingresa la contraseña de administrador:");
+
+    if (clave === "2bleA2026") {
+
+        document.getElementById("panelAdmin").style.display = "block";
+
+        window.scrollTo({
+            top: document.getElementById("panelAdmin").offsetTop,
+            behavior: "smooth"
+        });
+
+    } else {
+
+        alert("Contraseña incorrecta.");
+
+    }
+        }
 function guardarPromocion() {
 
     const titulo = document.getElementById("adminTitulo").value;
@@ -373,6 +392,13 @@ window.onload = function() {
     }
 };
     </script>
+        <div class="accesoAdmin">
+
+    <button class="boton adminBoton" onclick="abrirAdmin()">
+        ADMINISTRACIÓN
+    </button>
+
+        </div>
 </body>
 
                                           </html>
