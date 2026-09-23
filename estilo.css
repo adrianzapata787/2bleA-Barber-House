@@ -345,3 +345,86 @@ footer {
         font-size: 12px;
     }
     }
+/* ===== MEJORA PORTADA ===== */
+
+.etiqueta {
+    color: #777777;
+    font-size: 11px;
+    letter-spacing: 4px;
+    margin-top: -18px;
+    margin-bottom: 32px;
+    font-weight: bold;
+}
+
+header .boton {
+    min-width: 190px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+}
+
+/* ===== INTRODUCCIONES ===== */
+
+.intro-seccion {
+    color: #888888;
+    font-size: 14px;
+    margin-top: -20px;
+    margin-bottom: 32px;
+    letter-spacing: 0.5px;
+}
+
+/* ===== SERVICIOS PREMIUM ===== */
+
+.servicio {
+    position: relative;
+    overflow: hidden;
+}
+
+.servicio::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #ffffff;
+    opacity: 0.25;
+}
+
+.servicio h3 {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.precio {
+    margin-top: 8px;
+    letter-spacing: 1px;
+}
+
+/* ===== GALERÍA PREMIUM ===== */
+
+.galeria {
+    gap: 22px;
+}
+
+.galeria img {
+    box-shadow: 0 15px 35px rgba(0,0,0,0.35);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.galeria img:hover {
+    transform: translateY(-5px) scale(1.015);
+    box-shadow: 0 20px 45px rgba(0,0,0,0.5);
+}
+
+@media (max-width: 600px) {
+
+    .etiqueta {
+        font-size: 9px;
+        letter-spacing: 2.5px;
+        margin-top: -15px;
+    }
+
+    .intro-seccion {
+        font-size: 13px;
+    }
+
+    }
