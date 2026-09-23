@@ -291,7 +291,20 @@
         </p>
 
     </footer>
-
+<script>
+function compartirPagina() {
+    if (navigator.share) {
+        navigator.share({
+            title: '2bleA Barber House',
+            text: 'Conoce 2bleA Barber House',
+            url: window.location.href
+        });
+    } else {
+        navigator.clipboard.writeText(window.location.href);
+        alert('Enlace copiado. Ya puedes compartir 2bleA Barber House.');
+    }
+}
+            </script>
 </body>
 
                                           </html>
