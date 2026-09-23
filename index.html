@@ -324,6 +324,55 @@ function compartirPagina() {
     </div>
 
     </section>
+    <script>
+function guardarPromocion() {
+
+    const titulo = document.getElementById("adminTitulo").value;
+    const descripcion = document.getElementById("adminDescripcion").value;
+    const precio = document.getElementById("adminPrecio").value;
+    const fechas = document.getElementById("adminFechas").value;
+
+    document.getElementById("promoTitulo").textContent = titulo;
+    document.getElementById("promoDescripcion").textContent = descripcion;
+    document.getElementById("promoPrecio").textContent = precio;
+    document.getElementById("promoFechas").textContent = fechas;
+
+    localStorage.setItem("promoTitulo", titulo);
+    localStorage.setItem("promoDescripcion", descripcion);
+    localStorage.setItem("promoPrecio", precio);
+    localStorage.setItem("promoFechas", fechas);
+
+    alert("Promoción actualizada correctamente.");
+}
+
+window.onload = function() {
+
+    const titulo = localStorage.getItem("promoTitulo");
+    const descripcion = localStorage.getItem("promoDescripcion");
+    const precio = localStorage.getItem("promoPrecio");
+    const fechas = localStorage.getItem("promoFechas");
+
+    if (titulo) {
+        document.getElementById("promoTitulo").textContent = titulo;
+        document.getElementById("adminTitulo").value = titulo;
+    }
+
+    if (descripcion) {
+        document.getElementById("promoDescripcion").textContent = descripcion;
+        document.getElementById("adminDescripcion").value = descripcion;
+    }
+
+    if (precio) {
+        document.getElementById("promoPrecio").textContent = precio;
+        document.getElementById("adminPrecio").value = precio;
+    }
+
+    if (fechas) {
+        document.getElementById("promoFechas").textContent = fechas;
+        document.getElementById("adminFechas").value = fechas;
+    }
+};
+    </script>
 </body>
 
                                           </html>
